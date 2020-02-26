@@ -7,9 +7,7 @@ import { finalizeInitialChildren } from "./create/finalizeInitialChildren";
 import { prepareUpdate } from "./update/prepareUpdate";
 import { commitUpdate } from "./update/commitUpdate";
 import { commitTextUpdate } from "./update/commitTextUpdate";
-
-const rootHostContext = {};
-const childHostContext = {};
+import { others } from "./util/others";
 
 let reconciler = ReactReconciler({
   // create
@@ -35,48 +33,7 @@ let reconciler = ReactReconciler({
   insertBefore: (parentInstance: any, child, beforeChild) => {
     // parentInstance.insertBefore(child, beforeChild);
   },
-
-  now(): number {
-    return Date.now();
-  },
-
-  // Empty functions
-  getRootHostContext: (rootContainerInstance: any) => {
-    return {};
-  },
-  shouldSetTextContent(type: any, props: any) {
-    return false;
-  },
-  shouldDeprioritizeSubtree(type: any, props: any) {
-    return false;
-  },
-  getChildHostContext(
-    parentHostContext: any,
-    type: any,
-    rootContainerInstance: any
-  ): any {
-    return {};
-  },
-  getPublicInstance(instance: any) {},
-
-  scheduleDeferredCallback(
-    callback: any,
-    options?: { timeout: number }
-  ): any {},
-  cancelDeferredCallback(callbackID: any): void {},
-
-  setTimeout(handler: (...args: any[]) => void, timeout: number) {},
-  clearTimeout(handle: any): void {},
-  commitMount() {},
-  prepareForCommit(containerInfo: any) {},
-  resetAfterCommit(containerInfo: any) {},
-  appendChildToContainerChildSet(childSet: any, child) {},
-
-  noTimeout: true,
-  supportsMutation: true,
-  supportsHydration: false,
-  supportsPersistence: true,
-  isPrimaryRenderer: true
+  ...others
 });
 let CanDom = {
   render: (reactElement: any, domElement: any, callback?: any) => {
@@ -89,8 +46,8 @@ let CanDom = {
         false
       );
     }
-
     // update the root Container
+    // puts react element inside container
     return reconciler.updateContainer(
       reactElement,
       domElement._rootContainer,

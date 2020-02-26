@@ -48,8 +48,8 @@ const unitlessCSSProperties = {
   strokeMiterlimit: true,
   strokeOpacity: true,
   strokeWidth: true
-};
+} as any;
 
-export function isUnitlessProperty(styleName) {
+export function isUnitlessProperty(styleName: string) {
   return !!unitlessCSSProperties[styleName];
 }

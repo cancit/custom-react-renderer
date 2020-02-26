@@ -1,3 +1,5 @@
+import { shallowDiff } from "../util/diff";
+
 export function prepareUpdate(
   instance: any,
   type: any,
@@ -6,10 +8,6 @@ export function prepareUpdate(
   rootContainerInstance: any,
   hostContext: any
 ) {
-  /* if (
-    newProps.style &&
-    (!oldProps.style || newProps.style.color != oldProps.style.color)
-  ) {
-    return { field: "style.color" };
-  } */
+  console.log("prepareUpdate", type, oldProps, newProps);
+  // return shallowDiff(oldProps, newProps);
 }

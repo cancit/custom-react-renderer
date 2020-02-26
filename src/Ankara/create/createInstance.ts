@@ -12,20 +12,6 @@ export function createInstance(
     hostContext,
     internalInstanceHandle
   );
-  /*   let el = document.createElement(type);
-  [
-    "className",
-    "src",
-    "alt",
-    "href",
-    "rel",
-    "target",
-    "title",
-    "style"
-  ].forEach(k => {
-    if (props[k]) {
-      el[k] = props[k];
-    }
-  });
-  return el; */
+  // let el = document.createElement(type);
+  // return el;
 }
