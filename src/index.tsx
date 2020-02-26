@@ -1,6 +1,6 @@
 import React from "react";
 // import ReactDOM from 'react-dom';
-import CanDom from "./CanDom/renderer";
+import Ankara from "./Ankara/renderer";
 import BlessedWeb from "./BlessedWeb/renderer";
 
 import "./index.css";
@@ -9,7 +9,7 @@ import TerminalApp from "./terminal/App";
 
 import * as serviceWorker from "./serviceWorker";
 
-CanDom.render(<App />, document.getElementById("root2"));
+Ankara.render(<App />, document.getElementById("root2"));
 
 // BlessedWeb.render(<TerminalApp />, document.getElementById("root"));
 
