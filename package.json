@@ -2,24 +2,38 @@
   "name": "can-dom-project",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
+    "@babel/register": "^7.8.3",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "@types/blessed": "^0.1.17",
     "@types/jest": "^24.0.0",
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
+    "@types/react-blessed": "^0.3.2",
     "@types/react-dom": "^16.9.0",
+    "@types/react-reconciler": "^0.18.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "blessed": "^0.1.81",
     "react": "^16.12.0",
+    "react-blessed": "^0.6.2",
     "react-dom": "^16.12.0",
+    "react-reconciler": "^0.24.0",
     "react-scripts": "3.3.1",
+    "ts-node": "^8.6.2",
     "typescript": "~3.7.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "terminal": "node run.js",
+    "buildTerminal": "babel src --out-dir lib --copy-files"
   },
   "eslintConfig": {
     "extends": "react-app"

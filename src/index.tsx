@@ -1,10 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+// import ReactDOM from 'react-dom';
+import CanDom from "./CanDom/renderer";
+import BlessedWeb from "./BlessedWeb/renderer";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import "./index.css";
+import App from "./components/App";
+import TerminalApp from "./terminal/App";
+
+import * as serviceWorker from "./serviceWorker";
+
+CanDom.render(<App />, document.getElementById("root2"));
+
+// BlessedWeb.render(<TerminalApp />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
