@@ -35,7 +35,7 @@ let reconciler = ReactReconciler({
   },
   ...others
 });
-let CanDom = {
+let Ankara = {
   render: (reactElement: any, domElement: any, callback?: any) => {
     //  console.log(arguments);
     // Create a root Container if it doesnt exist
@@ -57,4 +57,4 @@ let CanDom = {
   }
 };
 
-export default CanDom;
+export default Ankara;
